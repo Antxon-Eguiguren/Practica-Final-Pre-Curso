@@ -1,0 +1,451 @@
+/* 
+	ESTILOS GENERALES
+ */
+
+/* Reset general de los estilos */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Tipografía para los párrafos */
+p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* Con esto consigo que los enlaces ancla dentro de mi HTML respeten el alto fijo de la cabecera y un poco más 20px para que quede mejor = 60px cabecera + 20px margen */
+span {
+	padding-top: 80px;
+	display: block;
+}
+
+/* Con esto consigo que los enlaces ancla dentro de mi HTML respeten el alto fijo de la cabecera */
+#servicios, #contacto {
+	padding-top: 60px;
+	display: block;
+}
+
+/* Imágenes responsive en toda la web */
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* Creación del contenedor encorsetado */
+.container {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+/* Creación del contenedor fluido */
+.container-fluid {
+	width: 100%;
+}
+
+/* 
+	ESTILOS DE LA CABECERA
+*/
+
+/* El estilo de toda la sección cabecera es una caja flex al 100% de ancho (sigue la clase de container-fluid) */
+.seccion-cabecera {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background-color: black;
+}
+
+/* El estilo de la caja del logo es una caja flex para poder poner la foto del logo como background */
+.caja-logo {
+	display: flex;
+	width: 20%;
+	height: 60px;
+	align-items: center;
+	justify-content: center;	
+}
+
+/* El estilo del logo */
+.logo {
+	width: 40px;
+	height: 19px;
+	background-image: url(../images/logo.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* El estilo del logo al pasar el ratón */
+.logo:hover {
+	background-image: url(../images/logo.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* El estilo de la caja del menú de navegación, también es una caja flex ya que contiene elementos en su interior */
+.menu {
+	display: flex;
+	width: 80%;
+	justify-content: flex-end;
+	padding-right: 10%;
+}
+
+/* El estilo de los enlaces del menú de navegación */
+.menu a {
+	color: #939393;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 15px;
+	opacity: .8;
+}
+
+/* El estilo de los enlaces del menú de navegación al pasar el ratón */
+.menu a:hover {
+	color: white;
+	opacity: 1;
+}
+
+/* 
+	ESTILOS BANNER PRINCIPAL BOSQUE
+*/
+
+/* La sección home no es flex, simplemente lleva una imagen de fondo que cubre el total de la pantalla */
+.seccion-home {
+	background-image: url(../images/bosque.jpg);
+	background-size: cover;
+	margin-top: -20px;
+}
+
+/* El texto home es una caja flex que contiene los elementos h1, p y a, y lleva padding para poder hacer más grande el elemento contenedor, en este caso la foto de la home, ya que la altura de una sección o un div es igual a la de los elementos que lo contienen */
+.texto-home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	padding-top: 250px;
+	padding-bottom: 600px;
+}
+
+/* El estilo del p del texto del banner principal */
+.texto-home p {
+	padding: 10px;
+	font-size: 21px;
+	font-family: 'Josefin Sans';
+}
+
+/* El estilo del h1 del texto del banner principal */
+.texto-home h1 {
+	padding: 10px;
+	font-size: 50px;
+}
+
+/* El estilo de los enlaces del texto del banner principal */
+.texto-home a {
+	padding: 14px;
+	font-size: 10px;
+	border: 1px solid white;
+	text-decoration: none;
+	border-radius: 25px;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+}
+
+/* El estilo de los enlaces al pasar el ratón del texto del banner principal */
+.texto-home a:hover {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+
+}
+
+/* ANIMACIÓN BOTÓN PULSE */
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.20, 1.20, 1.20);
+    transform: scale3d(1.20, 1.20, 1.20);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.20, 1.20, 1.20);
+    transform: scale3d(1.20, 1.20, 1.20);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+/* 
+	ESTILOS SECCION HISTORIA
+*/
+
+/* Estilo del titulo de la seccion historia */
+.historia h2, .equipo h2 {
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+	padding-bottom: 30px;
+}
+
+/* Estilo del texto de la seccion historia */
+.historia p {
+	padding-bottom: 30px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 18px;
+}
+
+/* 
+	ESTILOS SECCION EQUIPO
+*/
+
+/* La caja miembros es una caja flex que contiene 3 columnas, una por cada miembro del equipo */
+.miembros {
+	display: flex;
+}
+
+/* A su vez, cada columna, es una caja flex, con los elementos dentro */
+.columna-miembros {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+/* Padding entre las 3 columnas (solo modifico la del medio) */
+.columna-miembros:nth-child(2) {
+	padding: 0px 50px 0px 50px;
+}
+
+/* El estilo de la foto del miembro del equipo */
+.columna-miembros img:first-child {
+	border-radius: 50%;
+	width: 150px;
+}
+
+/* El estilo del nombre del miembro del equipo */
+.columna-miembros h3 {
+	padding: 30px 0px 15px 0px;
+	text-transform: uppercase;
+}
+
+/* El estilo del puesto del miembro del equipo */
+.columna-miembros h4 {
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	border-bottom: 1px solid black;
+	color: grey;
+	font-size: 14px;
+}
+
+/* El estilo de la descripción del puesto del miembro del equipo */
+.columna-miembros p {
+	padding-top: 30px;
+	text-align: center;
+	color: grey;
+}
+
+/* Hay una caja para el logo de twitter y el nombre. El logo es un elemento en línea pero el nombre es un elemento en bloque que hay que poner como elemento en línea */
+.fa-twitter {
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+/* El elemento en bloque p lo convertimos a elemento en línea para que logo y texto compartan la misma línea */
+.nombre-twitter {
+	display: inline;
+	color: black !important;
+}
+
+/* 
+	ESTILOS SECCIÓN SERVICIOS
+*/
+
+/* Estilo titulo servicios y contacto */
+.servicios h2, .contacto h2 {
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-style: italic;
+	text-align: center;
+	padding: 40px 0px;
+}
+
+.servicios div {
+	display: flex;
+}
+
+.col-texto {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.col-foto {
+	margin-left: 300px;
+	width: 50%;
+	/* margin: 0 auto; */
+}
+
+.servicios img {
+	width: 416px;
+	height: 416px;
+}
+
+.fondo-gris {
+	background-color: #F2F2F2;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+	padding-bottom: 50px;
+}
+
+.contenedor-formulario {
+	display: flex;
+	justify-content: center;
+}
+
+.formulario {
+	display: flex;
+	padding-right: 50px;
+	padding-top: 50px;
+}
+
+.formulario input {
+	border-bottom: 1px solid #cccccc;
+	border-top: white;
+	border-left: white;
+	border-right: white;
+	width: 100%;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.formulario textarea {
+	border: 1px solid #cccccc;
+	width: 100%;
+	resize: none;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+.formulario label {
+	color: #999999;
+	font-size: 18px;
+}
+
+#enviar {
+	border: none;
+	color: #999999;
+	background:#eeeeee;
+	padding: 5px;
+}
+
+#enviar:hover {
+	background: black;
+	color: white;
+}
+
+.informacion {
+	display: flex;
+	flex-direction: column;
+	padding-top: 30px;
+}
+
+.informacion h2 {
+	margin: 20px 0px 20px 0px;
+}
+
+/* PIE DE PÁGINA */
+
+.pie-de-pagina {
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+}
+
+.go-to-top {
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+	padding-top: 10px;
+}
+
+.go-to-top i {
+	color: grey;
+}
+
+.rrss {
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+	padding-bottom: 20px;
+}
+
+.rrss i {
+	padding: 15px 20px 0px 20px;
+	color: grey;
+}
+
+.rrss i:hover, .go-to-top i:hover {
+	color: white;
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
