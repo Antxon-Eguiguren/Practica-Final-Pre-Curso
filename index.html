@@ -23,11 +23,13 @@
 			</div>
 			<div class="menu">
 				<nav>
-					<a href="#home">Home</a>
-					<a href="#historia">Historia</a>
-					<a href="#equipo">Equipo</a>
-					<a href="#servicios">Servicios</a>
-					<a href="#contacto">Contacto</a>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#historia">Historia</a></li>
+						<li><a href="#equipo">Equipo</a></li>
+						<li><a href="#servicios">Servicios</a></li>
+						<li id="contacto"><a href="#contactos">Contacto</a></li>
+					</ul>
 				</nav>
 			</div>
 		</section>
@@ -47,6 +49,9 @@
 		<span id="historia"></span>
 		<section class="historia container">
 			<h2>Our Story</h2>
+			<div class="underline">
+				<hr noshade="noshade">
+			</div>
 			<article>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ullam praesentium modi dolorum, maxime
 					in magnam delectus error corporis dolore fugiat quam, adipisci officiis natus temporibus inventore!
@@ -70,6 +75,9 @@
 		<span id="equipo"></span>
 		<section class="equipo container">
 			<h2>Dream Team</h2>
+			<div class="underline">
+				<hr noshade="noshade">
+			</div>
 			<div class="miembros">
 				<div class="columna-miembros">
 					<img src="images/team-2.jpg">
@@ -80,7 +88,9 @@
 						dolore exercitationem? Facere corporis, illum. Aperiam, autem mollitia.</p>
 					<div>
 						<i class="fab fa-twitter"></i>
-						<p class="nombre-twitter">@dagger</p>
+						<a href="">
+							<p class="nombre-twitter">@dagger</p>
+						</a>
 					</div>
 				</div>
 				<div class="columna-miembros">
@@ -92,7 +102,9 @@
 						dolore exercitationem? Facere corporis, illum. Aperiam, autem mollitia.</p>
 					<div>
 						<i class="fab fa-twitter"></i>
-						<p class="nombre-twitter">@parker</p>
+						<a href="">
+							<p class="nombre-twitter">@parker</p>
+						</a>
 					</div>
 				</div>
 				<div class="columna-miembros">
@@ -104,7 +116,9 @@
 						dolore exercitationem? Facere corporis, illum. Aperiam, autem mollitia.</p>
 					<div>
 						<i class="fab fa-twitter"></i>
-						<p class="nombre-twitter">@rims</p>
+						<a href="">
+							<p class="nombre-twitter">@rims</p>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -113,12 +127,11 @@
 		<span id="servicios"></span>
 		<section class="servicios container-fluid">
 			<h2>Servicios</h2>
-
-			<div>
-				<div class="col-foto">
+			<div class="servicio container">
+				<div class="col1">
 					<img src="images/service-1.jpg">
 				</div>
-				<div class="col-texto">
+				<div class="col2">
 					<h3>Web Design</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat fugiat ipsam laudantium
 						necessitatibus commodi maiores, error, architecto nam repellendus facilis. Libero autem
@@ -131,28 +144,30 @@
 				</div>
 			</div>
 
-			<div class="fondo-gris">
-				<div class="col-texto">
-					<h3>App Development</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat fugiat ipsam laudantium
-						necessitatibus commodi maiores, error, architecto nam repellendus facilis. Libero autem
-						dolores,
-						veniam quas commodi ea ipsa recusandae atque.Lorem ipsum dolor sit amet, consectetur
-						adipisicing
-						elit. Vel, doloribus voluptates nemo accusantium enim at hic amet assumenda, porro ullam
-						nihil
-						animi impedit mollitia nesciunt magnam harum quisquam! Atque, temporibus.</p>
-				</div>
-				<div class="col-foto">
-					<img src="images/service-2.jpg">
+			<div class="fondo-gris container-fluid">
+				<div class="servicio container">
+					<div class="col1">
+						<h3>App Development</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat fugiat ipsam laudantium
+							necessitatibus commodi maiores, error, architecto nam repellendus facilis. Libero autem
+							dolores,
+							veniam quas commodi ea ipsa recusandae atque.Lorem ipsum dolor sit amet, consectetur
+							adipisicing
+							elit. Vel, doloribus voluptates nemo accusantium enim at hic amet assumenda, porro ullam
+							nihil
+							animi impedit mollitia nesciunt magnam harum quisquam! Atque, temporibus.</p>
+					</div>
+					<div class="col2">
+						<img src="images/service-2.jpg">
+					</div>
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="col">
+			<div class="servicio container">
+				<div class="col1">
 					<img src="images/service-3.jpg">
 				</div>
-				<div class="col">
+				<div class="col2">
 					<h3>Illustration</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat fugiat ipsam laudantium
 						necessitatibus commodi maiores, error, architecto nam repellendus facilis. Libero autem
@@ -165,9 +180,9 @@
 				</div>
 			</div>
 
-			<div class="container-fluid fondo-gris">
-				<div class="container">
-					<div class="col">
+			<div class="fondo-gris container-fluid">
+				<div class="servicio container">
+					<div class="col1">
 						<h3>Print Design</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat fugiat ipsam laudantium
 							necessitatibus commodi maiores, error, architecto nam repellendus facilis. Libero autem
@@ -178,17 +193,17 @@
 							nihil
 							animi impedit mollitia nesciunt magnam harum quisquam! Atque, temporibus.</p>
 					</div>
-					<div class="col">
+					<div class="col2">
 						<img src="images/service-4.jpg">
 					</div>
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="col">
+			<div class="servicio container">
+				<div class="col1">
 					<img src="images/service-1.jpg">
 				</div>
-				<div class="col">
+				<div class="col2">
 					<h3>Marketing</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat fugiat ipsam laudantium
 						necessitatibus commodi maiores, error, architecto nam repellendus facilis. Libero autem
@@ -202,7 +217,7 @@
 			</div>
 		</section>
 
-		<span id="contacto"></span>
+		<span id="contactos"></span>
 		<section class="contacto">
 			<h2>Contacto</h3>
 				<div class="contenedor-formulario">
@@ -242,7 +257,7 @@
 				<a href="#"><i class="fab fa-instagram"></i></a>
 			</div>
 			<div class="copyright">
-				<p>Antxon Eguiguren</p>
+				<p>Created by <a href="">Antxon Eguiguren</a></p>
 			</div>
 		</section>
 	</footer>

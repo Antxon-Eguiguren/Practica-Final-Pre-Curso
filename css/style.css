@@ -1,12 +1,21 @@
-/* 
-	ESTILOS GENERALES
- */
+/* ---------------------------------------------------------------------------------------------------------------
+	IMPORT
+-----------------------------------------------------------------------------------------------------------------*/
+@import url(reset.css);
 
-/* Reset general de los estilos */
+/*
+TIPOGRAFÍAS:
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS GENERALES
+-----------------------------------------------------------------------------------------------------------------*/
+
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	scroll-behavior: smooth;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -15,6 +24,7 @@ p {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+	color: #aaa;
 }
 
 /* Con esto consigo que los enlaces ancla dentro de mi HTML respeten el alto fijo de la cabecera y un poco más 20px para que quede mejor = 60px cabecera + 20px margen */
@@ -33,12 +43,14 @@ span {
 img {
 	width: 100%;
 	height: auto;
+	display: block;
 }
 
 /* Creación del contenedor encorsetado */
 .container {
-	max-width: 60%;
+	max-width: 1100px;
 	margin: 0 auto;
+	padding: 0 3%;
 }
 
 /* Creación del contenedor fluido */
@@ -46,9 +58,9 @@ img {
 	width: 100%;
 }
 
-/* 
-	ESTILOS DE LA CABECERA
-*/
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS CABECERA
+-----------------------------------------------------------------------------------------------------------------*/
 
 /* El estilo de toda la sección cabecera es una caja flex al 100% de ancho (sigue la clase de container-fluid) */
 .seccion-cabecera {
@@ -86,11 +98,14 @@ img {
 }
 
 /* El estilo de la caja del menú de navegación, también es una caja flex ya que contiene elementos en su interior */
-.menu {
+.menu nav ul {
 	display: flex;
 	width: 80%;
 	justify-content: flex-end;
-	padding-right: 10%;
+}
+
+#contacto {
+	padding: 0px;
 }
 
 /* El estilo de los enlaces del menú de navegación */
@@ -100,6 +115,7 @@ img {
 	text-transform: uppercase;
 	margin: 0 15px;
 	opacity: .8;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 /* El estilo de los enlaces del menú de navegación al pasar el ratón */
@@ -108,9 +124,9 @@ img {
 	opacity: 1;
 }
 
-/* 
-	ESTILOS BANNER PRINCIPAL BOSQUE
-*/
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS HERO
+-----------------------------------------------------------------------------------------------------------------*/
 
 /* La sección home no es flex, simplemente lleva una imagen de fondo que cubre el total de la pantalla */
 .seccion-home {
@@ -133,7 +149,8 @@ img {
 .texto-home p {
 	padding: 10px;
 	font-size: 21px;
-	font-family: 'Josefin Sans';
+	font-family: 'Josefin Sans', sans-serif;
+	color: black;
 }
 
 /* El estilo del h1 del texto del banner principal */
@@ -206,16 +223,17 @@ img {
   animation-name: pulse;
 }
 
-/* 
-	ESTILOS SECCION HISTORIA
-*/
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS HISTORIA
+-----------------------------------------------------------------------------------------------------------------*/
 
 /* Estilo del titulo de la seccion historia */
 .historia h2, .equipo h2 {
 	text-align: center;
-	text-decoration: underline;
 	text-transform: uppercase;
 	padding-bottom: 30px;
+	font-size: 1.5em;
+	font-weight: 700;
 }
 
 /* Estilo del texto de la seccion historia */
@@ -226,13 +244,28 @@ img {
 	font-size: 18px;
 }
 
-/* 
-	ESTILOS SECCION EQUIPO
-*/
+.underline {
+    position: relative;
+    width: 80px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.underline hr {
+    position: absolute;
+    width: 100%;
+    border-color: black;
+	top: -25px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS EQUIPO
+-----------------------------------------------------------------------------------------------------------------*/
 
 /* La caja miembros es una caja flex que contiene 3 columnas, una por cada miembro del equipo */
 .miembros {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 /* A su vez, cada columna, es una caja flex, con los elementos dentro */
@@ -241,11 +274,12 @@ img {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
+	width: 33.33333333%;
+	padding: 0px 20px;
 }
 
-/* Padding entre las 3 columnas (solo modifico la del medio) */
-.columna-miembros:nth-child(2) {
-	padding: 0px 50px 0px 50px;
+.columna-miembros img {
+	box-shadow: 5px 5px 8px #aaa;
 }
 
 /* El estilo de la foto del miembro del equipo */
@@ -286,11 +320,12 @@ img {
 .nombre-twitter {
 	display: inline;
 	color: black !important;
+	font-weight: 700;
 }
 
-/* 
-	ESTILOS SECCIÓN SERVICIOS
-*/
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS SERVICIOS
+-----------------------------------------------------------------------------------------------------------------*/
 
 /* Estilo titulo servicios y contacto */
 .servicios h2, .contacto h2 {
@@ -303,35 +338,38 @@ img {
 	padding: 40px 0px;
 }
 
-.servicios div {
+.servicio {
 	display: flex;
+	flex-wrap: nowrap;
+	padding: 40px 0px;
 }
 
-.col-texto {
-	display: flex;
-	flex-direction: column;
+.col1, .col2 {
 	width: 50%;
-	margin: 0 auto;
+	padding: 0px 30px;
 }
 
-.col-foto {
-	margin-left: 300px;
-	width: 50%;
-	margin: 0 auto;
+.col1 h3, .col2 h3 {
+	font-size: 1.5em;
+	padding-bottom: 30px;
 }
 
-.servicios img {
-	width: 416px;
-	height: 416px;
+.col1 img, .col2 img {
+	max-width: 416px;
+	max-height: 416px;
+}
+
+.col1 img:hover, .col2 img:hover {
+	outline: 5px solid yellow;
 }
 
 .fondo-gris {
 	background-color: #F2F2F2;
 }
 
-/* Prueba de commit para subir a remoto */
-
-/* CONTACTO */
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS CONTACTO
+-----------------------------------------------------------------------------------------------------------------*/
 
 .contacto {
 	padding-bottom: 50px;
@@ -340,6 +378,8 @@ img {
 .contenedor-formulario {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0 3%;
 }
 
 .formulario {
@@ -386,19 +426,23 @@ img {
 .informacion {
 	display: flex;
 	flex-direction: column;
+	padding-top: 20px;
+}
+
+.informacion h3 {
+	font-size: 1.5em;
 	padding-top: 30px;
 }
 
-.informacion h2 {
-	margin: 20px 0px 20px 0px;
-}
-
-/* PIE DE PÁGINA */
+/* ---------------------------------------------------------------------------------------------------------------
+	ESTILOS FOOTER
+-----------------------------------------------------------------------------------------------------------------*/
 
 .pie-de-pagina {
 	display: flex;
 	flex-direction: column;
 	background-color: black;
+	padding-bottom: 20px;
 }
 
 .go-to-top {
@@ -434,19 +478,65 @@ img {
 	color: grey;
 }
 
+.copyright a {
+	text-decoration: none;
+	color: grey;
+}
+
+.copyright a:hover {
+	text-decoration: underline;
+	color: white;
+}
 
 
+/* ---------------------------------------------------------------------------------------------------------------
+	MEDIA QUERIES: Hemos empezado en desktop first y vamos bajando hasta móvil (no hacemos tablet porque no es necesario, la web se maqueta bien hasta la versión móvil).
+-----------------------------------------------------------------------------------------------------------------*/
 
+/* Versión móvil */
+@media (max-width: 763px) {
+	.texto-home {
+		padding-top: 400px;
+		color: white;
+	}
 
+	.texto-home p {
+		color: white;
+	}
 
+	.columna-miembros {
+		width: 100%;
+	}
 
+	.servicio p {
+		display: none;
+	}
 
+	.texto-home h1 {
+		text-align: center;
+	}
 
+	.menu nav ul {
+		display: inline-block;
+		padding: 20px 0px;
+	}
 
+	.menu nav ul li {
+		padding: 10px 0px;
+		padding-right: 60px;
+		border-bottom: 1px solid #aaa;
+	}
 
+	#contacto {
+		border-bottom: none;
+		padding-top: 10px;
+	}
 
+	span {
+		padding-top: 260px;
+	}
 
-
-
-
-
+	#servicios, #contactos {
+		padding-top: 218px;
+	}
+}
